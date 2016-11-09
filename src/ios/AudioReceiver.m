@@ -88,14 +88,14 @@ void HandleInputBuffer(void* inUserData,
             bitRate = 8;
         }
 
-        _recordState.mDataFormat.mFormatID = kAudioFormatLinearPCM;
+        _recordState.mDataFormat.mFormatID = kAudioFormatMPEG4AAC;
         _recordState.mDataFormat.mSampleRate = 1.0 * sampleRate;
         _recordState.mDataFormat.mBitsPerChannel = bitRate;
         _recordState.mDataFormat.mChannelsPerFrame = channels;
         _recordState.mDataFormat.mFramesPerPacket = 1;
         _recordState.mDataFormat.mBytesPerPacket =_recordState.mDataFormat.mBytesPerFrame = (_recordState.mDataFormat.mBitsPerChannel / 8) * _recordState.mDataFormat.mChannelsPerFrame;
         _recordState.mDataFormat.mReserved = 0;
-        _recordState.mDataFormat.mFormatFlags = kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked;
+        _recordState.mDataFormat.mFormatFlags = kMPEG4Object_HVXC;
         _recordState.bufferByteSize = (UInt32) MIN(bufferSizeInBytes, maxBufferSize);
     }
 
