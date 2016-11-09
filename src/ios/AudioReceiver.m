@@ -95,7 +95,6 @@ void HandleInputBuffer(void* inUserData,
         _recordState.mDataFormat.mFramesPerPacket = 1;
         _recordState.mDataFormat.mBytesPerPacket =_recordState.mDataFormat.mBytesPerFrame = (_recordState.mDataFormat.mBitsPerChannel / 8) * _recordState.mDataFormat.mChannelsPerFrame;
         _recordState.mDataFormat.mReserved = 0;
-        _recordState.mDataFormat.mFormatFlags = kMPEG4Object_HVXC;
         _recordState.bufferByteSize = (UInt32) MIN(bufferSizeInBytes, maxBufferSize);
     }
 
